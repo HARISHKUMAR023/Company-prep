@@ -229,4 +229,26 @@ int main()
 b o k u
 
 ```
+### 10 - Output of The following code 
+
+``` java
+
+ public int zoho(String[] args) {
+        int nums[] = {1, 2, 3, 1, 1, 1};
+        int ans = 0;
+
+        for (int i = 0; i < nums.length; i++) { 
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) 
+                    ans++;
+            }
+        }
+
+        return ans;
+    }
+```
+### Output 
+``` bash
+6
+```
 
