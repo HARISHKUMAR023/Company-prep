@@ -251,4 +251,60 @@ b o k u
 ``` bash
 6
 ```
+### 11 - Output of The following code 
+
+``` java
+
+public String zoho(String[] strs) {
+    if (strs.length == 0) 
+        return "";  // Return an empty string if the array is empty
+    
+    String temp = strs[0];  // Start with the first string as the initial prefix
+    
+    for (int i = 1; i < strs.length; i++) {  // Loop through the other strings
+        while (strs[i].indexOf(temp) != 0) {  // Check if the current string starts with `temp`
+            temp = temp.substring(0, temp.length() - 1);  // Shorten `temp` if it doesn't match
+            if (temp.isEmpty()) 
+                return "";  // If `temp` is empty, no common prefix exists
+        }
+    }
+    
+    return temp;  // Return the longest common prefix found
+}
+
+```
+### Input
+``` bash
+Input: ["flower", "flow", "flight"]
+```
+### Output 
+``` bash
+ "fl"
+```
+### 12 - Output of The following code 
+
+``` java
+
+class Solution {
+    public int[] zoho(int[] nums) {
+        int[] ans = new int[2 * nums.length];  // Create a new array with double the length
+        
+        for (int i = 0; i < nums.length; i++) {
+            ans[i] = ans[i + nums.length] = nums[i];  // Copy each element to two positions
+        }
+        
+        return ans;  // Return the concatenated array
+    }
+}
+
+
+```
+### Input
+``` bash
+Input:[1, 2, 1]
+```
+### Output 
+``` bash
+[1, 2, 1, 1, 2, 1]
+```
 
