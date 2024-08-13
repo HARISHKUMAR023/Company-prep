@@ -78,3 +78,48 @@ def expand_string(s):
     return expanded_str
 ```
 
+
+## 3-Write a program to get the output:
+### Input and Output
+``` bash
+input1 = "a1b10"
+output1 = expand_string(input1)
+print(output1)  # Output: abbbbbbbbb
+```
+``` bash
+input2 = "b3c6d15"
+output2 = expand_string(input2)
+print(output2)  # Output: bbbccccccddddddddddddddd
+```
+
+``` python 
+a = "ZohoCorporation"
+for i in range(len(a)):
+    for j in range(len(a)):
+        if i == j:
+            print(a[i], end="")
+        elif (len(a) - 1) - i == j:
+            print(a[::-1][i], end="")
+        else:
+            print(" ", end="")
+    print("")
+
+```
+``` bash 
+Z             n
+ o           o 
+  h         i  
+   o       t   
+    C     a    
+     o   r     
+      r o      
+       p       
+      r o      
+     o   r     
+    C     a    
+   o       t   
+  h         i  
+ o           o 
+Z             n
+
+```
