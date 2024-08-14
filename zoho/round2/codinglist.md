@@ -113,3 +113,44 @@ Z             n
  o           o 
 Z             n
 ```
+
+
+
+
+## 4 -Write a program to get the output:
+
+
+``` python 
+zohost = {
+    "zo": "zoho",
+    "a": "and",
+    "in": "invoice",
+    "bk": "books",
+    "exp": "expense",
+    "io": "inventory",
+    "chek": "checkout",
+    "pa": "payroll",
+    "com": "commerce",
+    "py": "payments",
+    "bg": "billing"  
+}
+
+a = "zobgachek"
+ans = []
+key = ""
+
+for i in a:
+    key += i
+    if key in zohost:
+        ans.append(zohost[key])
+        key = ""
+if key:
+    ans.append(key)
+
+print(" ".join(ans))
+
+```
+### Input and Output
+``` bash 
+
+```
