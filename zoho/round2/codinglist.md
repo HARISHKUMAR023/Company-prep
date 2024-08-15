@@ -152,5 +152,39 @@ print(" ".join(ans))
 ```
 ### Input and Output
 ``` bash 
-
+zoho billing and checkout
 ```
+
+### Question -5:
+
+Given an array, the distance between two array values is the number of indices between them. Find the minimum distance between any pair of equal elements in the array. If no such value exists, return `-1`.
+
+### Example:
+
+- **Input:** `[1, 2, 3, 4, 10]`
+- **Output:** `-1`
+
+### Explanation:
+
+Since there are no repeating elements in the array, there is no distance to calculate. Therefore, the output is `-1`.
+
+### Code:
+
+```python
+arr = [1, 2, 3, 4, 10]
+my = {}
+mini = len(arr) + 1  # Start with a value larger than the array length
+
+for i, nums in enumerate(arr):
+    if nums in my: 
+        m = i - my[nums]
+        mini = min(m, mini)
+        
+    my[nums] = i  # Store the index of the current number
+
+# Check if a valid minimum distance was found
+if mini == len(arr) + 1:
+    print(-1)
+else:
+    print(mini)  # Output will be -1 since there are no pairs
+
